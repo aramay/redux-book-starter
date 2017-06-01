@@ -1,23 +1,32 @@
 import 'normalize.css/normalize.css'
 import 'assets/stylesheets/main.css'
 
+import store from 'store/stores.js'
 
-import store from './stores.js'
+import addRecipe from 'actions/recipes.js'
+import addIngredient from 'actions/ingriedients.js'
+import loadUI from 'ui/index';
 
-import addRecipe from './actions/recipes.js'
-import addIngredient from './actions/ingriedients.js'
+import { fetchRecipes } from './actions/recipes';
 
-console.log("before actions ", store.getState())
 
-store.dispatch(addRecipe('Pancake'))
+loadUI()
 
-store.dispatch(addIngredient('Pancake', 'Eggs', 3))
+// store.dispatch(fetchRecipes());
 
-store.dispatch(addRecipe('Omlette'))
+console.log('before actions ', store.getState())
 
-store.dispatch(addIngredient('Omelette', 'Eggs', 1))
+// store.dispatch(addRecipe('Pancake'))
 
-console.log("after actions ", store.getState())
+// store.dispatch(addIngredient('Pancake', 'Eggs', 3))
+
+// store.dispatch(addRecipe('Omlette'))
+
+// store.dispatch(addIngredient('Omelette', 'Eggs', 1))
+
+console.log('after actions ', store.getState())
+
+
 
 window.store = store
 console.log('Redux started')

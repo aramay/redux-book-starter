@@ -1,7 +1,16 @@
-import { ADD_RECIPE } from 'constants/action-type'
+import { ADD_RECIPE, SET_RECIPES } from 'constants/action-type'
 
-const addRecipe = (name) => ({
+export const addRecipe = (name) => ({
   type: ADD_RECIPE, name
 })
 
-export default addRecipe
+export const fetchRecipes = () => ({
+  type: 'FETCH_RECIPES'
+});
+
+export const setRecipes = (recipes) => ({
+  type: SET_RECIPES,
+  recipes
+});
+
+// export default addRecipe
