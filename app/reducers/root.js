@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
+export const ADD_RECIPE = 'ADD_RECIPE';
+export const ADD_INGREDIENT = 'ADD_INGREDIENT';
 
 const recipesReducer = (recipes = [], action) => {
   switch (action.type) {
-    case 'ADD_RECIPE':
+    case ADD_RECIPE:
     console.log('ADD_RECIPE')
       // console.log(action)
       // console.log('state ', recipes.concat({name: action.name}))
@@ -17,7 +19,7 @@ const recipesReducer = (recipes = [], action) => {
 
 const ingriedientsReducer = (ingriedients = [], action) => {
   switch (action.type) {
-    case 'ADD_INGREDIENT':
+    case ADD_INGREDIENT:
       console.log('ADD_INGEDIENT')
       // console.log(state)
 
